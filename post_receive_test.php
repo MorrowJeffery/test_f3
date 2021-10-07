@@ -1,8 +1,5 @@
 <?php
 
-// Forked from https://gist.github.com/1809044
-// Available from https://gist.github.com/nichtich/5290675#file-deploy-php
-
 $TITLE   = 'Git Deployment Hamster';
 $VERSION = '0.11';
 
@@ -59,7 +56,7 @@ flush();
 $commands = array(
 	'echo $PWD',
 	'whoami',
-	'git fetch',
+	'git pull',
 	'git status',
 	'git submodule sync',
 	'git submodule update',
@@ -83,7 +80,7 @@ foreach($commands AS $command){
 
 $log .= "\n";
 
-file_put_contents ('deploy-log.txt',$log,FILE_APPEND);
+//file_put_contents ('deploy-log.txt',$log,FILE_APPEND);
 
 echo $output;
 
