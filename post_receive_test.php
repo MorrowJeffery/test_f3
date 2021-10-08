@@ -24,7 +24,7 @@ EOT;
 	'207.97.227.', '50.57.128.', '108.171.174.', '50.57.231.', '204.232.175.', '192.30.252.', // GitHub
 	'195.37.139.','193.174.' // VZG
 );*/
-$allowed = true; 
+$allowed = true;
 
 //$headers = apache_request_headers();
 
@@ -67,6 +67,21 @@ $commands = array(
 $output = "\n";
 
 $log = "####### ".date('Y-m-d H:i:s'). " #######\n";
+
+/* $postBody = $_POST['payload'];
+$payload = json_decode($postBody);
+
+$branch = $payload->ref;
+
+//ADD LOGIC HERE so we can pull in the correct place for the correct branch
+
+if ($branch == "refs/heads/morrow") {
+	//morrow specific pull in a morrow directory
+}
+
+if ($branch == "refs/heads/main") {
+	//dev branch pull in dev directory
+} */
 
 foreach($commands AS $command){
     // Run it
